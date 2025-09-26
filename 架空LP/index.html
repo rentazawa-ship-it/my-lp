@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HakoTrip - 函館観光サイト</title>
+  <style>
+    /* リセット */
+    body, h1, h2, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 全体 */
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* ヘッダー */
+    header {
+      background: url('hakodate-hero.jpg') no-repeat center/cover;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* ナビゲーション */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #007acc;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* セクション */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #007acc;
+      display: inline-block;
+    }
+
+    /* グリッド表示 */
+    .spots, .foods, .accommodation {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* アイテム */
+    .item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .item div {
+      padding: 15px;
+    }
+
+    /* お問い合わせ */
+    .contact {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #007acc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #007acc; /* 色を統一 */
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <h1>HakoTrip</h1>
+    <p>函館の魅力を一目で</p>
+  </header>
+
+  <!-- ナビゲーション -->
+  <nav>
+    <a href="#spots">観光スポット</a>
+    <a href="#foods">グルメ</a>
+    <a href="#accommodation">宿泊</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <!-- 観光スポット -->
+  <section id="spots">
+    <h2>観光スポット</h2>
+    <div class="spots">
+      <div class="item">
+        <img src="kanemori.jpg" alt="金森赤レンガ倉庫">
+        <div>
+          <h3>金森赤レンガ倉庫</h3>
+          <p>歴史ある倉庫群。ショップやレストランが集まる観光名所。</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="hakodateMT.jpeg" alt="函館山">
+        <div>
+          <h3>函館山</h3>
+          <p>夜景が有名。ロープウェイで山頂へ簡単アクセス。</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="hachimanzaka.jpeg" alt="八幡坂">
+        <div>
+          <h3>八幡坂</h3>
+          <p>港と街並みが見渡せる絶景スポット。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- グルメ -->
+  <section id="foods">
+    <h2>グルメ</h2>
+    <div class="foods">
+      <div class="item">
+        <img src="rappi.jpeg" alt="ラッキーピエロ">
+        <div>
+          <h3>ラッキーピエロ</h3>
+          <p>函館発祥のファストフード店</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="ramen.jpeg" alt="ラーメン">
+        <div>
+          <h3>ラーメン</h3>
+          <p>函館塩ラーメンで有名な地元名店を紹介。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 宿泊 -->
+  <section id="accommodation">
+    <h2>宿泊</h2>
+    <div class="accommodation">
+       <div class="item">
+        <img src="hotel.webp" alt="ホテル">
+        <div>
+          <h3>ホテル例</h3>
+          <p>観光に便利な市内ホテル。予約リンク（架空）付き。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact" class="contact">
+    <h2>お問い合わせ</h2>
+    <p>ご依頼・ご相談はお気軽にどうぞ。</p>
+    <a href="mailto:yourmail@example.com" class="btn">メールで問い合わせる</a>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 HakoTrip (架空サイト)</p>
+  </footer>
+
+</body>
+</html>
